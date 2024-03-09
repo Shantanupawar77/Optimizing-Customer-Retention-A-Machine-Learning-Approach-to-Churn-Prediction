@@ -5,3 +5,5 @@ ipython
 matplotlib
 seaborn
 gunicorn
+flask
+joblib
