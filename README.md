@@ -15,4 +15,4 @@ This project aims to predict customer churn using machine learning techniques. B
 The dataset used for this project can be found in `Customer_churn_dataset.csv`. It contains various features such as customer demographics, usage patterns, and churn status
 
 ## Demo 
-The Application is at link (https://optimizing-customer-retention-a-machine.onrender.com)
+The Application is hosted at link (https://optimizing-customer-retention-a-machine.onrender.com)
