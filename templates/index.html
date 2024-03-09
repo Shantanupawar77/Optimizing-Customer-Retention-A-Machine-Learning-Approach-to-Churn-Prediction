@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #ffecd2;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            /* Adjust container width */
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            /* Light gray */
+            border-radius: 10px;
+            /* Rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Soft shadow */
+            animation: slide-down 0.5s ease-in-out forwards;
+            /* Apply animation */
+        }
+
+        /* Heading styles */
+        h1 {
+            color: #375e97;
+            /* Dark cyan */
+            text-align: center;
+            margin-bottom: 30px;
+            /* Increase spacing */
+        }
+
+        /* Input field styles */
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ced4da;
+            /* Gray border */
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+            /* Increase spacing */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container label {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .input-container input {
+            flex: 2;
+        }
+
+        /* Button styles */
+        .predict-button {
+            text-align: center;
+        }
+
+        /* Prediction text styles */
+        .prediction-text {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            color: #6c757d;
+            /* Dark gray */
+            animation: slide-down 0.5s ease-in-out forwards;
+            /* Apply animation */
+        }
+
+        /* Animation */
+        @keyframes slide-down {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Forest Fire Prediction</h1>
+
+                <form action="/predict" method="post">
+                    <div class="form-group">
+                        <div class="input-container">
+                            <label for="contract">Contract:</label>
+                            <input type="text" id="contract" name="contract">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="onlinesecurity">Online Security:</label>
+                            <input type="text" id="onlinesecurity" name="onlinesecurity">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="techsupport">Tech Support:</label>
+                            <input type="text" id="techsupport" name="techsupport">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="internetservice">Internet Service:</label>
+                            <input type="text" id="internetservice" name="internetservice">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="onlinebackup">Online Backup:</label>
+                            <input type="text" id="onlinebackup" name="onlinebackup">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="tenure">Tenure:</label>
+                            <input type="text" id="tenure" name="tenure">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="monthlycharges">Monthly Charges:</label>
+                            <input type="text" id="monthlycharges" name="monthlycharges">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="totalcharges">Total Charges:</label>
+                            <input type="text" id="totalcharges" name="totalcharges">
+                        </div>
+
+                    </div>
+                    <div class="predict-button">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            Predict Probability
+                        </button>
+                    </div>
+                </form>
+
+                <div class="prediction-text">
+                    <h2>{{pred}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
