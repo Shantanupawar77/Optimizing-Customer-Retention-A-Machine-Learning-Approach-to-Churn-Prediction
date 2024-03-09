@@ -16,3 +16,6 @@ The dataset used for this project can be found in `Customer_churn_dataset.csv`. 
 
 ## Demo 
 The Application is hosted at link (https://optimizing-customer-retention-a-machine.onrender.com)
+
+## Contributors
+- [Shantanu Pawar]((https://github.com/Shantanupawar77))
