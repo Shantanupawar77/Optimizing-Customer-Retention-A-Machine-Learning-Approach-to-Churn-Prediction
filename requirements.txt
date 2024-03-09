@@ -4,3 +4,4 @@ numpy
 ipython
 matplotlib
 seaborn
+gunicorn
